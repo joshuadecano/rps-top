@@ -40,6 +40,12 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
-const computerSelection = getComputerChoice()
-const playerSelection = getPlayerChoice()
-console.log(playRound(playerSelection, computerSelection))
+function game() {
+    for (let i = 0; i < 5; i++){
+        const computerSelection = getComputerChoice()
+        const playerSelection = getPlayerChoice()
+        console.log(playRound(playerSelection, computerSelection))
+    }
+}
+
+console.log(game())
