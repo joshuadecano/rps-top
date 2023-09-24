@@ -28,17 +28,15 @@ function getPlayerChoice(){
 function playRound(playerSelection, computerSelection){
     console.log("Ready?")
     if (playerSelection === computerSelection){
-        console.log("Draw!")
+        return "Draw!";
     } else if ((playerSelection === 'Rock' && computerSelection === 'Paper') ||
     (playerSelection === 'Paper' && computerSelection === 'Scissors') ||
     (playerSelection === 'Scissors' && computerSelection === 'Rock')){
-        console.log("You Lose! " + computerSelection + " beats " + playerSelection);
+        return "You Lose! " + computerSelection + " beats " + playerSelection;
     } else if ((playerSelection === 'Rock' && computerSelection === 'Scissors') ||
     (playerSelection === 'Paper' && computerSelection === 'Rock') ||
     (playerSelection === 'Scissors' && computerSelection === 'Paper')){
-        console.log("You Win! " + playerSelection + " beats " + computerSelection);
-    } else {
-        console.log("whoops")
+        return "You Win! " + playerSelection + " beats " + computerSelection;
     }
 }
 
